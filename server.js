@@ -15,16 +15,16 @@ const backend = {
 }
 
 const settings = {
-  port: process.env.PORT || 1883,
+  port: parseInt(process.env.PORT) || 1883,
   backend
 }
 
 const config = {
-  database: process.env.DB_NAME     || 'pardsrl_v2',
-  username: process.env.DB_USERNAME || 'root',
-  password: process.env.DB_PASSWORD || '123',
-  host:     process.env.DB_HOST     || 'localhost',
-  port:     process.env.DB_PORT     || 3306,
+  database: process.env.DB_NAME           || 'pardsrl_v2',
+  username: process.env.DB_USERNAME       || 'root',
+  password: process.env.DB_PASSWORD       || '123',
+  host:     process.env.DB_HOST           || 'localhost',
+  port:     parseInt(process.env.DB_PORT) || 3306,
   dialect: 'mysql',
   // logging: s => debug(s)
   logging: false
