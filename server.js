@@ -117,7 +117,7 @@ async function init () {
               payload: JSON.stringify({
                 agent: {
                   uuid: agent.uuid,
-                  nombre: agent.nombre,
+                  hostname: agent.hostname,
                   conectado: agent.conectado
                 }
               })
