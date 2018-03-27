@@ -8,7 +8,8 @@
     "debug": "^3.1.0",
     "mosca": "^2.8.0",
     "pardsrl-db": "git+https://github.com/pardsrl/pardsrl-db.git",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "request": "^2.85.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.2",
