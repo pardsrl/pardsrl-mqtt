@@ -10,12 +10,10 @@ const request = require('request')
 const { parsePayload } = require('./utils')
 
 const _influx = {
-  https: process.env.INFLUX_HTTPS || false,
-  host: process.env.INFLUX_SERVER || 'localhost',
-  port: parseInt(process.env.INFLUX_PORT) || 8081
+  host: process.env.INFLUX_HOST || 'http://localhost:8081'
 }
 
-const _influxUrl = `${_influx.https ? 'https' : 'http'}://${_influx.host}:${_influx.port}/api`
+const _influxUrl = `${_influx.host}/api`
 
 const backend = {
   type: 'redis',
