@@ -19,7 +19,7 @@ const backend = {
   type: 'redis',
   redis,
   db: process.env.REDIS_DB || 0,
-  channel: `sync/${process.env.REDIS_CHANNEL}` || 'sync/default',
+  prefix: process.env.REDIS_CHANNEL ? `${process.env.REDIS_CHANNEL}` : 'default',
   return_buffers: true
 }
 
