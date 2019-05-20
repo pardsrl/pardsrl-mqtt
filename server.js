@@ -18,6 +18,7 @@ const _influxUrl = `${_influx.host}/api`
 const backend = {
   type: 'redis',
   redis,
+  host: process.env.REDIS_HOST || 'localhost',
   db: process.env.REDIS_DB || 0,
   prefix: process.env.REDIS_CHANNEL ? `${process.env.REDIS_CHANNEL}` : 'default',
   return_buffers: true
